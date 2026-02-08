@@ -14,7 +14,7 @@ This project is a Python script that retrieves network device information from a
 - Retrieves device inventory from REST API endpoint
 - Checks whether API request is succesful
 - Parses JSON data into Pandas DataFrame
-- Displays a clean and redable table of devices and their information
+- Displays a clean and readable table of devices and their information
 
 ## Sample Data Format
 
