@@ -58,5 +58,10 @@
         "hostname": "wireless-controller-01",
         "ip": "10.0.1.5",
         "model": "Cisco 3504 WLC"
+    },
+    {
+        "hostname": "switch-02",
+        "ip": "10.0.0.6",
+        "model": "Cisco 2960X"
     }
 ]
