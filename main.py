@@ -6,6 +6,19 @@ import pandas as pd
 def fetch_devices():
     return requests.get("https://6988ea18780e8375a6897173.mockapi.io/devices")
 
+# Function that checks inventory for errors
+def validate_inventory(devices):
+    # Initialize empty errors list
+    errors = []
+    
+    # Check for duplicate host names
+    host_names = [device["hostname"] for device in devices]
+    for name in set(host_names):
+        if host_names.count(name) > 1:
+            errors.append(f"Duplicate hostname found: {name}")
+            
+    return errors
+
 def main():
     # Get data from API
     r = fetch_devices()
@@ -16,6 +29,14 @@ def main():
         return
     
     devices = r.json()
+    
+    # Call validate_inventory function and print if there are errors
+    errors = validate_inventory(devices)
+    if errors:
+        print("Inventory Validation Errors")
+        for error in errors:
+            print("-", error)
+    else: print("Inventory Validation passed with no issues.")
     
     # Create table using data from API request
     data_frame = pd.DataFrame(devices)
