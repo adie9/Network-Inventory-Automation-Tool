@@ -61,7 +61,6 @@
     },
     {
         "hostname": "switch-02",
-        "ip": "10.0.0.6",
         "model": "Cisco 2960X"
     }
 ]
