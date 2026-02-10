@@ -6,7 +6,7 @@ This project is a Python script that retrieves network device information from a
 
 ## Technologies Used
 
-- Python (Requests, Pandas)
+- Python (Requests, JSON, Pandas)
 - [mockAPI](https://mockapi.io/)
 
 ## What the Script Does
@@ -15,6 +15,7 @@ This project is a Python script that retrieves network device information from a
 - Checks whether API request is succesful
 - Parses JSON data into Pandas DataFrame
 - Displays a clean and readable table of devices and their information
+- Outputs data to JSON file
 
 ## Sample Data Format
 
@@ -61,7 +62,7 @@ hostname        ip                model
 
 ## Planned Improvements
 
-- CSV/JSON Export
+- Baseline to current state comparison
 - CLI menu for user interaction
 - Increased data size
 - Integration with Cisco Meraki API
