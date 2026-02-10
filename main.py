@@ -11,6 +11,12 @@ def validate_inventory(devices):
     # Initialize empty errors list
     errors = []
     
+    # Check for missing fields
+    for device in devices:
+        for field in ["hostname", "ip", "model"]:
+            if field not in device:
+                errors.append(f"Missing '{field}' in device: {device}")
+    
     # Check for duplicate host names
     host_names = [device["hostname"] for device in devices]
     for name in set(host_names):
