@@ -1,0 +1,62 @@
+[
+    {
+        "hostname": "switch-01",
+        "ip": "10.0.0.5",
+        "model": "Cisco 2960"
+    },
+    {
+        "hostname": "router-01",
+        "ip": "10.0.0.1",
+        "model": "Cisco ISR 4321"
+    },
+    {
+        "hostname": "switch-02",
+        "ip": "10.0.0.6",
+        "model": "Cisco 2960X"
+    },
+    {
+        "hostname": "switch-03",
+        "ip": "10.0.0.7",
+        "model": "Cisco Catalyst 9200"
+    },
+    {
+        "hostname": "router-02",
+        "ip": "10.0.0.2",
+        "model": "Cisco ISR 4451"
+    },
+    {
+        "hostname": "firewall-01",
+        "ip": "10.0.0.10",
+        "model": "Cisco ASA 5516-X"
+    },
+    {
+        "hostname": "ap-01",
+        "ip": "10.0.1.20",
+        "model": "Cisco Aironet 1832i"
+    },
+    {
+        "hostname": "ap-02",
+        "ip": "10.0.1.21",
+        "model": "Cisco Aironet 2802i"
+    },
+    {
+        "hostname": "core-switch-01",
+        "ip": "10.0.0.254",
+        "model": "Cisco Catalyst 9500"
+    },
+    {
+        "hostname": "distribution-switch-01",
+        "ip": "10.0.0.200",
+        "model": "Cisco Catalyst 3850"
+    },
+    {
+        "hostname": "vpn-gateway-01",
+        "ip": "10.0.0.15",
+        "model": "Cisco Meraki MX84"
+    },
+    {
+        "hostname": "wireless-controller-01",
+        "ip": "10.0.1.5",
+        "model": "Cisco 3504 WLC"
+    }
+]
