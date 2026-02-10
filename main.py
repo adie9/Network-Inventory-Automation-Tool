@@ -1,4 +1,5 @@
 import requests
+import json
 import pandas as pd
 
 def main():
@@ -14,7 +15,11 @@ def main():
     
     # Create table using data from API request
     data_frame = pd.DataFrame(devices)
-    print(data_frame) 
+    print(data_frame)
+    
+    # Write to JSON file
+    with open("baseline.json", 'w') as file:
+        json.dump(devices, file, indent=4)
       
 if __name__ == "__main__":
     main()
