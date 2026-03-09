@@ -1,4 +1,5 @@
 import requests
+import sys
 import json
 import pandas as pd
 
@@ -6,7 +7,12 @@ API_URL = "https://6988ea18780e8375a6897173.mockapi.io/devices"
 
 # Function that fetches devices from API
 def fetch_devices():
-    return requests.get(API_URL)
+    response = requests.get(API_URL)
+    # Error handling for unsuccessful data retrieval
+    if response.status_code != 200:
+        print("Error! Could not retrieve data. Exiting program...")
+        sys.exit(1)
+    return response
 
 # Function that checks inventory for errors
 def validate_inventory(devices):
@@ -30,12 +36,6 @@ def validate_inventory(devices):
 def main():
     # Get data from API
     r = fetch_devices()
-    
-    # Error handling for unsuccessful data retrieval
-    if r.status_code != 200:
-        print("Error! Could not retrieve data. Exiting program...")
-        return
-    
     devices = r.json()
     
     # Call validate_inventory function and print if there are errors
