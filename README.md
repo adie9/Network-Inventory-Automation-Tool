@@ -1,4 +1,4 @@
-# Network Inventory Dashboard
+# Network Inventory Automation Tool
 
 ## Overview
 
