@@ -2,9 +2,11 @@ import requests
 import json
 import pandas as pd
 
+API_URL = "https://6988ea18780e8375a6897173.mockapi.io/devices"
+
 # Function that fetches devices from API
 def fetch_devices():
-    return requests.get("https://6988ea18780e8375a6897173.mockapi.io/devices")
+    return requests.get(API_URL)
 
 # Function that checks inventory for errors
 def validate_inventory(devices):
